@@ -1,0 +1,41 @@
+:root {
+  --night: #07110d;
+  --lime: #c8ff2e;
+  --cream: #f0f4e7;
+  --dim: #a6b4a5;
+}
+
+* { box-sizing: border-box; }
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--cream);
+  font-family: "Trebuchet MS", sans-serif;
+  background: radial-gradient(circle at 50% 0%, #335a31 0, transparent 38rem), linear-gradient(145deg, #08130e, #101d13 58%, #302116);
+}
+.shell { width: min(100% - 40px, 980px); min-height: 100vh; margin: auto; display: grid; place-items: center; }
+.start-view, .download-view { width: 100%; text-align: center; }
+.tag { color: var(--lime); letter-spacing: .16em; font: 700 .78rem "Courier New", monospace; }
+h1, h2 { margin: 10px 0 18px; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+h1 { font-size: clamp(4.4rem, 11vw, 8.5rem); line-height: .82; text-shadow: 5px 5px 0 #000; }
+h2 { font-size: clamp(2.9rem, 7vw, 5.4rem); color: var(--lime); }
+.lead { max-width: 620px; margin: 0 auto 30px; color: #d7e0d4; font-size: 1.14rem; line-height: 1.55; }
+.play-button { border: 0; padding: 17px 36px; cursor: pointer; color: var(--night); background: var(--lime); box-shadow: 7px 7px 0 #72931c; font: 900 1.15rem Impact, sans-serif; letter-spacing: .06em; text-transform: uppercase; transition: transform .16s ease; }
+.play-button:hover { transform: translate(-2px, -3px); }
+.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 70px; text-align: left; }
+.info-grid article, .platform { border: 1px solid #587255; background: #112119c9; padding: 20px; }
+.info-grid strong, .platform strong { display: block; color: var(--lime); margin-bottom: 8px; font: 1.25rem Impact, sans-serif; letter-spacing: .04em; text-transform: uppercase; }
+.info-grid span, .platform span { color: var(--dim); font-size: .93rem; line-height: 1.35; }
+.platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.platform { min-height: 164px; display: grid; align-content: center; text-align: left; text-decoration: none; color: var(--cream); transition: transform .16s ease, border-color .16s ease; }
+.platform.mac { border-color: var(--lime); background: linear-gradient(140deg, #1c3a20, #122016); cursor: pointer; }
+.platform.mac:hover { transform: translateY(-4px); }
+button.platform { font-family: "Trebuchet MS", sans-serif; cursor: not-allowed; opacity: .58; }
+.download-status { min-height: 28px; margin-top: 26px; color: var(--dim); }
+[hidden] { display: none !important; }
+
+@media (max-width: 680px) {
+  .shell { width: min(100% - 32px, 600px); }
+  .info-grid, .platforms { grid-template-columns: 1fr; }
+  .info-grid { margin-top: 42px; }
+}

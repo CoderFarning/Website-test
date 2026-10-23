@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zombie Clash - Python Survival-Spiel.">
+  <title>Zombie Clash</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <section class="start-view" id="start-view">
+      <p class="tag">PYTHON SURVIVAL-SPIEL</p>
+      <h1>Zombie Clash</h1>
+      <p class="lead">Kämpfe gegen immer stärkere Zombie-Wellen, sammle Gems und verbessere deine Ausrüstung.</p>
+      <button class="play-button" id="show-downloads" type="button">Online spielen</button>
+      <div class="info-grid">
+        <article><strong>Wellen</strong><span>Die Arena wird mit jeder Runde gefährlicher.</span></article>
+        <article><strong>Upgrades</strong><span>Verbessere Waffen und maximales Leben.</span></article>
+        <article><strong>Rauch</strong><span>Ab Welle 5 wird der Rand giftig.</span></article>
+      </div>
+    </section>
+
+    <section class="download-view" id="download-view" hidden aria-live="polite">
+      <h2>Wähle deine Version</h2>
+      <div class="platforms">
+        <a class="platform mac" href="downloads/ZombieClash-macOS.zip" download data-download="macOS">
+          <strong>macOS-Version</strong>
+          <span>App herunterladen und installieren</span>
+        </a>
+        <button class="platform unavailable" type="button" data-platform="Windows">
+          <strong>Windows-Version</strong>
+          <span>Kommt bald</span>
+        </button>
+        <button class="platform unavailable" type="button" data-platform="Linux">
+          <strong>Linux-Version</strong>
+          <span>Kommt bald</span>
+        </button>
+      </div>
+      <p class="download-status" id="download-status">Wähle eine Plattform aus.</p>
+    </section>
+  </main>
+</body>
+</html>
